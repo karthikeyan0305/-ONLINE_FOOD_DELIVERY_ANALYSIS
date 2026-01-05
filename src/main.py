@@ -7,22 +7,22 @@ from config import CLEAN_DATA_PATH
 
 
 def main():
-    print("▶️ Loading data...")
+    print("Loading data...")
     df = load_data()
 
-    print("▶️ Cleaning data...")
+    print(" Cleaning data...")
     df = clean_data(df)
 
-    print("▶️ Feature engineering...")
+    print("Feature engineering...")
     df = feature_engineering(df)
 
-    print("▶️ Running EDA...")
+    print(" Running EDA...")
     run_eda(df)
 
-    print("▶️ Saving cleaned CSV...")
+    print(" Saving cleaned CSV...")
     df.to_csv(CLEAN_DATA_PATH, index=False)
 
-    print("▶️ Uploading to MySQL...")
+    print(" Uploading to MySQL...")
     # upload_to_mysql(df)   # DB ready illa na comment pannalaam
 
     print("✅ PIPELINE COMPLETED SUCCESSFULLY")
