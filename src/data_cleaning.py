@@ -15,7 +15,7 @@ def clean_data(df):
     df.loc[df['delivery_rating'] > 5, 'delivery_rating'] = 5
     df.loc[df['profit_margin'] < 0, 'profit_margin'] = 0
 
-     # 🔹 Outlier capping (order_value)
+     # Outlier capping (order_value)
     q1 = df['order_value'].quantile(0.25)
     q3 = df['order_value'].quantile(0.75)
     iqr = q3 - q1
